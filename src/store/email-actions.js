@@ -11,7 +11,7 @@ export const fetchMyEmailData = (myEmail) => {
     // console.log(editedMail)
     try {
       const resp = await axios.get(
-        `https://react-mail-box-client-http-default-rtdb.firebaseio.com/mails/${editedMail}.json`
+        `https://mail-box-4d875-default-rtdb.firebaseio.com/mails/${editedMail}.json`
         
       )
       // console.log(resp)
