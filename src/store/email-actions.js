@@ -83,7 +83,7 @@ export const addEmailData = (email, emailBody) => {
 
     try {
       const resp = await axios.post(
-        `https://react-mail-box-client-http-default-rtdb.firebaseio.com/mails/${editedMail}/inbox.json`,
+        `https://mail-box-4d875-default-rtdb.firebaseio.com/mails/${editedMail}/inbox.json`,
         emailBody
       )
       //   console.log(resp)
@@ -95,7 +95,7 @@ export const addEmailData = (email, emailBody) => {
         let sentEditedMail = tmp1 + tmp3 + tmp4
 
         const resp = await axios.post(
-          `https://react-mail-box-client-http-default-rtdb.firebaseio.com/mails/${sentEditedMail}/sent.json`,
+          `https://mail-box-4d875-default-rtdb.firebaseio.com/mails/${sentEditedMail}/sent.json`,
           emailBody
         )
         // console.log(resp)
@@ -132,7 +132,7 @@ export const deleteEmailData = (email, type, id) => {
     // console.log(editedMail, deleteKey, id)
     try {
       const resp = await axios.delete(
-        `https://react-mail-box-client-http-default-rtdb.firebaseio.com/mails/${editedMail}/${deleteKey}/${id}.json`
+        `https://mail-box-4d875-default-rtdb.firebaseio.com/mails/${editedMail}/${deleteKey}/${id}.json`
         
       )
       //   console.log(resp)
@@ -163,7 +163,7 @@ export const updateEmailData = (emailBody, id) => {
 
     try {
       const resp = await axios.put(
-        `https://react-mail-box-client-http-default-rtdb.firebaseio.com/mails//${editedMail}/inbox/${id}.json`,
+        `https://mail-box-4d875-default-rtdb.firebaseio.com/mails/${editedMail}/inbox/${id}.json`,
         emailBody
       )
       //   console.log(resp)

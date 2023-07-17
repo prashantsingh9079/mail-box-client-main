@@ -22,7 +22,7 @@ const MailLeftBody = () => {
   return (
     <div className={classes.leftBody}>
       <div className={classes.leftInside}>
-        <img className={classes.insideImg} src={logo} alt='gmail' />
+        {/* <img className={classes.insideImg} src={logo} alt='gmail' /> */}
         <button
           onClick={() => {
             dispatch(emailActions.startEditing())
