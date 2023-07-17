@@ -1,10 +1,10 @@
 import React from 'react'
 import classes from './MailLeftBody.module.css'
-import logo from '../../assets/gmail-logo.jpg'
+// import logo from '../../assets/gmail-logo.jpg'
 import { RiInboxArchiveFill } from 'react-icons/ri'
 import { IoIosSend } from 'react-icons/io'
 import { GrEdit } from 'react-icons/gr'
-import { MdOutlineUnfoldMore } from 'react-icons/md'
+// import { MdOutlineUnfoldMore } from 'react-icons/md'
 import { useDispatch, useSelector } from 'react-redux'
 import { emailActions } from '../../store/emailSlice'
 
@@ -46,12 +46,12 @@ const MailLeftBody = () => {
             Sent ({emailList.sentData.length})
           </p>
         </div>
-        <div className={classes.linkType}>
+        {/* <div className={classes.linkType}>
           <div>
             <MdOutlineUnfoldMore size={30} />
           </div>
           <p>More</p>
-        </div>
+        </div> */}
       </div>
     </div>
   )

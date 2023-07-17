@@ -14,7 +14,7 @@ export const fetchMyEmailData = (myEmail) => {
         `https://mail-box-4d875-default-rtdb.firebaseio.com/mails/${editedMail}.json`
         
       )
-      // console.log(resp)
+      console.log(resp)
       if (resp.status === 200) {
         // console.log(resp)
         const data = resp.data
@@ -23,7 +23,7 @@ export const fetchMyEmailData = (myEmail) => {
         // console.log(sentMailTmp)
         const receivedMailTmp = data.inbox
         // console.log(receivedMailTmp)
-        let tmp
+        // let tmp
         let sentMail = []
         let receivedMail = []
 
@@ -98,7 +98,7 @@ export const addEmailData = (email, emailBody) => {
           `https://mail-box-4d875-default-rtdb.firebaseio.com/mails/${sentEditedMail}/sent.json`,
           emailBody
         )
-        // console.log(resp)
+        console.log(resp)
         dispatch(fetchMyEmailData(emailBody.from))
         dispatch(emailActions.stopEditing())
       } else {
